@@ -5,4 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(5, 5, 52);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
