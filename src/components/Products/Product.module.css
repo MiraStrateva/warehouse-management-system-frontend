@@ -1,0 +1,50 @@
+.product {
+    display: block;
+    justify-content: space-between;
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .product h3 {
+    margin: 0 0 0.25rem 0;
+  }
+  
+  .description {
+    font-style: italic;
+    margin-left: 0;
+  }
+  
+  .size {
+    margin-top: 0.25rem;
+    font-weight: bold;
+    color: #ad5502;
+    font-size: 1.25rem;
+  }
+
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid rgb(5, 5, 52);
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: rgb(5, 5, 52);
+    border-color: rgb(5, 5, 52);
+    color: white;
+  }
+  
+  .actions .button--alt {
+    color: #acd1ee;
+  }
+  

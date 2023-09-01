@@ -1,10 +1,10 @@
-import { useRouteError } from 'react-router-dom';
+// import { useRouteError } from 'react-router-dom';
 import MainNavigation from '../Shared/MainNavigation';
 
 import PageContent from '../Shared/PageContent';
 
 function ErrorPage() {
-  const error = useRouteError();
+  // const error = useRouteError();
 
   let title = 'An error occurred!';
   let message = 'Something went wrong!';

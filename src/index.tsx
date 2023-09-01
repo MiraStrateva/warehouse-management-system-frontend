@@ -13,24 +13,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// client
-//   .query({
-//     query: gql`
-//       query {
-//         productsList(input: { limit: 10, currentPage: 1, total: true }) {
-//           data {
-//             id
-//             name
-//             description
-//             size
-//             hazardous
-//           }
-//         }
-//       }4
-//     `,
-//   })
-//   .then((result) => console.log(result));
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
