@@ -5,11 +5,11 @@ import { useMutation } from "@apollo/client";
 import { SIGNUP } from "../../graphql/login";
 import Input from "../UI/Input";
 import { isEmpty, isMinLength, isEmail } from "../../utils/validation";
-import { GraphQLError } from "../../types/GraphQLError";
+import { graphQLError } from "../../types/graphQLError";
 
 import "../Form.css";
 
-function Signup() {
+const Signup = () => {
   const [displayError, setDisplayError] = useState<JSX.Element[]>([]);
   const [formInputsValidity, setFormInputsValidity] = useState({
     username: true,
@@ -75,9 +75,9 @@ function Signup() {
         username: username,
         password: password,
         retypedPassword: retypedPassword,
-        firstName: firstNameInput.current?.value,
-        lastName: lastNameInput.current?.value,
-        email: emailInput.current?.value,
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
       },
     })
       .then(({ data }) => {
@@ -87,7 +87,7 @@ function Signup() {
       })
       .catch((error) => {
         const originalError = error.graphQLErrors[0].extensions
-          .originalError as GraphQLError;
+          .originalError as graphQLError;
 
         let message = originalError.message.map((msg: any) => {
           return (

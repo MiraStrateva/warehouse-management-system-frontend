@@ -2,19 +2,18 @@ import React, { useRef, useState } from "react";
 import { Form, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 
-import { GraphQLError } from "../../types/GraphQLError";
 import Input from "../UI/Input";
 import { LOGIN } from "../../graphql/login";
 
 import "../Form.css";
 
-function Login() {
+const Login = () => {
   const navigate = useNavigate();
   const [displayError, setDisplayError] = useState("");
   const userNameInput = useRef<HTMLInputElement>(null);
   const passwordInput = useRef<HTMLInputElement>(null);
 
-  const [login, { error }] = useMutation(LOGIN);
+  const [login] = useMutation(LOGIN);
 
   const submitHandler = (event: React.FormEvent) => {
     event.preventDefault();
